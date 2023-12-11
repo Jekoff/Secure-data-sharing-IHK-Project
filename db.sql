@@ -1,0 +1,12 @@
+CREATE TABLE Benutzerdaten (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    TOKEN VARCHAR(16) UNIQUE NOT NULL,
+    Username VARCHAR(32) NOT NULL,
+    Mail VARCHAR(32) NOT NULL,
+    Password VARCHAR(32) NOT NULL,
+    Notes TEXT,
+    loginurl VARCHAR(100),
+    created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    failedLogins INT,
+    otp VARCHAR(6) NOT NULL
+);
